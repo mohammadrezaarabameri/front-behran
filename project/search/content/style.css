@@ -1,0 +1,371 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  font-family:sans-serif,Arial;
+  font-size:10pt;
+  background-color: rgb(251, 253, 253);
+  } */
+  body {
+    margin: 0;
+    font-family: "Source Sans Pro",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #f4f6f9;
+}
+.user-panel, .user-panel .info {
+  overflow: hidden;
+  white-space: nowrap;
+  align-items: center;
+  color: rgb(255 255 255 / 80%);
+  display: inline-block;
+}
+img {
+  width: 4rem;
+   margin: -0.5rem;
+   align-items: center;
+   /* padding: 10px; */
+ }
+ .elevation-21 {
+  box-shadow: 0 3px 6pxrgba(0,0,0,.16),0 3px 6pxrgba(0,0,0,.23)!important;
+  margin-top: -13px;
+}
+.content-header {
+  padding: 0px 0.5rem;
+}
+.widget-user .widget-user-image>img {
+  border: 3px solid #fff;
+  height: 82px;
+  width: 90px;
+}
+.timeline>.time-label1>span {
+  border-radius: 4px;
+  background-color: #fff;
+  display: inline-block;
+  font-weight: 600;
+  padding: 5px;
+  margin-top: 10px;
+}
+  .input-group-append {
+    margin-left: 214px;
+    margin-top: 10px;
+}
+.input-group-append, .input-group-prepend {
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+}
+  .form-control {
+    display: flex;
+    width: 62%;
+    height: calc(2.25rem + 2px);
+    padding: 1.375rem .75rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #faf8f8;
+    background-color: rgba(10, 10, 10, 0.979);
+    background-clip: padding-box;
+    border: 1px solid rgb(255 255 255 / 80%);
+    border-radius: .25rem;
+    box-shadow: inset 0 0 0 transparent;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.btn-default {
+  background-color: #f39c12;
+  border-color: #ddd;
+  color: #444;
+}
+  .elevation-21 {
+    box-shadow: 0 3px 6pxrgba(0,0,0,.16),0 3px 6pxrgba(0,0,0,.23)!important;
+  }
+  .widget-user .widget-user-image>img {
+    border: 3px solid #fff;
+    height: 82px;
+    width: 90px;
+  }
+  img {
+    width: 5rem;
+     margin: -0.5rem;
+     align-items: center;
+     /* padding: 10px; */
+   }
+   .bg-yellow {
+    background-color: #f39c12!important;
+}
+  .timeline {
+    padding: 0;
+    margin-left: 25px;
+    position: relative;
+}
+  
+  /* .tree {
+  white-space: nowrap;
+  min-width: 800px;
+  min-height:500px;
+  align-items: center;
+  }
+  .tree ul {
+  padding-top: 20px;
+  position: relative;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  }
+ 
+  .tree li {
+  float: left;
+  text-align: center;
+  list-style-type: none;
+  position: relative;
+  margin: 0px 31px 0px 35px;
+  padding: 20px 5px 0 5px;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  } */
+  /*We will use ::before and ::after to draw the connectors*/
+
+  /* .tree li::before, .tree li::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 50%;
+  border-top: 1px solid rgb(10, 10, 10);
+  width: 60%;
+  height: 20px;
+  }
+  .tree li::after {
+  right: auto;
+  left: 59%;
+  border-left: 1px solid rgb(2, 2, 2);
+  } */
+  /*We need to remove left-right connectors from elements without any siblings*/
+  /* .tree li:only-child::after, .tree li:only-child::before {
+  display: none;
+  } */
+  /*Remove space from the top of single children*/
+  /* .tree li:only-child {
+  padding-top: 0;
+  } */
+  /*Remove left connector from first child and right connector from last child*/
+  /* .tree li:first-child::before, .tree li:last-child::after {
+  border: 0 none;
+  } */
+  /*Adding back the vertical connector to the last nodes*/
+  /* .tree li:last-child::before {
+  border-right: 1px solid rgb(17, 17, 17);
+  border-radius: 0 5px 0 0;
+  -webkit-border-radius: 0 5px 0 0;
+  -moz-border-radius: 0 5px 0 0;
+  }
+  .tree li:first-child::after {
+  border-radius: 5px 0 0 0;
+  -webkit-border-radius: 5px 0 0 0;
+  -moz-border-radius: 5px 0 0 0;
+  } */
+  /*Time to add downward connectors from parents*/
+  /* .tree ul ul::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  border-left: 1px solid rgb(3, 3, 3);
+  width: 0;
+  height: 20px;
+  }
+  .tree li div {
+  border:10px solid #ef6572;
+  padding: 4px 4px;
+  text-decoration: none;
+  color: #040404;
+  font-family: arial, verdana, tahoma;
+  font-size: 11px;
+  display: inline-grid;
+  min-width: 80px;
+  min-height: 30px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  }
+  .tree li div .male {
+  background-color:#a7f384;
+  display: inline-block;
+  margin-bottom: 5px;
+  width:232px;
+  padding: 10px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  }
+  .tree li div .female {
+  background-color:#fad879;
+  display: inline-block;
+  width:232px;
+  margin-bottom: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  }
+  .tree li div .spacer {
+  background-color:lightblue;
+  display: inline-block;
+  width:10px;
+  } */
+  /*Time for some hover effects*/
+  /*We will apply the hover effect the the lineage of the element also*/
+  /* .tree li div:hover, .tree li div:hover + ul li div {
+  background: #c8e4f8;
+  color: #000;
+  border: 1px solid #94a0b4;
+  } */
+  /*Connector styles on hover*/
+  /* .tree li div:hover + ul li::after,
+  .tree li div:hover + ul li::before,
+  .tree li div:hover + ul::before,
+  .tree li div:hover + ul ul::before {
+  border-color: #94a0b4;
+  } */
+  /* .My-Border {
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-top: 3px solid orange;
+   } */
+   .text-insert{
+    text-align: center;
+    font-size: 1rem;
+    transition: .4s;
+    width: 32%;
+    height: 13%;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    margin: 1.5rem 9px 9px 430px;
+    background-color: beige;
+
+}
+.submit-insert{
+    text-align: center;
+    font-size: 1rem;
+    transition: .4s;
+    width: 14%;
+    height: 13%;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    background-color:  rgb(2, 114, 48);
+    color:  rgb(248, 248, 250);
+    margin: 1rem 0 0 0;
+
+}
+.insert{
+    text-align: center;
+    font-size: 1rem;
+    transition: .4s;
+    width: 28%;
+    height: 13%;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    background-color:  rgb(2, 114, 48);
+    color:  rgb(248, 248, 250);
+}
+/* .flex-containerl {
+  width: 71rem;
+  background-color: rgba(3, 0, 2, 0.95);
+  border-radius: 2.2rem;
+  padding: 1rem;
+  margin: 1rem auto;
+}
+.welcome{
+  color: brown;
+  text-align: center;
+    font-size: 30px;
+    margin-top: 63px;
+
+}
+.user-title {
+  color: #101010;
+  font-size: 2rem;
+  font-family: 'Poppins', sans-serif !important;
+  text-align: center;
+  margin-top: 30px;
+} */
+/* 
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+.container {
+  max-width: 80rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+.header {
+}
+
+.header-top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+  background-color: #1eafb7;
+
+}
+.nav {
+  display: flex;
+  align-items: center;
+}
+.nav-logo {
+  margin-right: 2rem;
+}
+.nav-logo__img {
+}
+.menu {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+  display: flex;
+}
+.menu__item {
+}
+.menu__link {
+  text-decoration: none;
+  color: #0a0a0a;
+  padding: 0 1rem;
+  background-color: #1eafb7;
+
+  
+}
+.header__link{
+  background-color: #c80062;
+  padding: 0.8rem 1.5em;
+  color: #fff;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  margin-right: 13px;
+
+} */
+/* .form-control{
+  text-align: center;
+  font-size: 1rem;
+  transition: .4s;
+  width: 61%;
+  height: 13%;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin: 6px;
+
+} */

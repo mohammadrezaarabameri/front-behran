@@ -1,0 +1,250 @@
+* {
+    padding: 0;
+    margin: 8px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif !important;
+}
+.flex-container,
+.flex-item {
+    border-radius: 0.2rem;
+}
+.flex-container {
+    width: 56rem;
+    background-color: rgb(108, 190, 223);
+    border-radius: 0.2rem;
+    padding: 1rem;
+    margin: 2rem auto;
+
+    display: flex;
+    /* flex-direction: row; */
+    /* flex-direction: column; */
+    /* flex-direction: row-reverse; */
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+
+    /* flex-flow: row wrap; */
+}
+.parent{
+width: 18rem;
+display: flex;
+align-items: center;
+}
+.flex-item {
+    width: 14rem;
+    height: 25rem;
+    line-height: 2.1rem;
+    background-color: rgb(76 74 75 / 96%);
+    text-align: right;
+    margin: 0.5rem;
+    font-size: 1rem;
+    align-items: center;
+    column-gap: 20px;
+    padding: 10px;
+}
+.flex-containerl {
+    width: 60rem;
+    background-color: rgb(247 18 166 / 95%);
+    border-radius: 0.2rem;
+    padding: 1rem;
+    margin: 2rem auto;
+}
+.user-profile-name {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-align: left;
+    color:rgb(233, 233, 240) ;
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+}
+.user-explanations {
+    margin-top: -1px;
+    width: 250px;
+    text-align: left;
+    font-size: 0.7rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: rgb(247 251 9);
+}
+.delete-user-btn {
+    background-color:  rgb(2, 2, 247);
+    color:  rgb(248, 248, 250);
+}
+.delete-user-btn {
+    padding: 8px 5px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    text-align: center;
+    font-size: 1rem;
+    transition: .4s;
+    width: 30%;
+    height: 13%;
+    border-radius: 0.5rem;
+    margin: 6px;
+}
+.user-profile-names {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    text-align: left;
+    color:rgb(233, 233, 240) ;
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+}
+.user-explanationss {
+    margin-top: 68px;
+    width: 250px;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.7rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: rgb(247 251 9);
+
+}
+.user-profile-namess {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    text-align: left;
+    color:rgb(233, 233, 240) ;
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+}
+.user-explanationsss {
+    margin-top: 170px;
+    width: 250px;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.7rem;
+    color: rgb(247 251 9);
+}
+
+img {
+ width: 4rem;
+  margin: -0.5rem;
+  align-items: center;
+  /* padding: 10px; */
+}
+.feed{
+    text-align: center;
+    font-size: 1rem;
+    transition: .4s;
+    width: 69%;
+    height: 13%;
+    border-radius: 0.5rem;
+}
+.start{
+    text-align: center;
+    margin: 3rem 0 0 0;
+}
+.welcome{
+    color: brown;
+
+}
+.title{
+    font-size: 1.5rem;
+
+}
+.user-btn{
+    padding: 1rem;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    text-align: center;
+    font-size: 1.5rem;
+    transition: .4s;
+    width: 41%;
+    height: 20%;
+    border-radius: 0.5rem;
+    background-color: rgb(8 247 2);
+    color: rgb(7 7 8);
+    margin: 1rem 0 0 0;
+
+}
+.text-insert{
+    text-align: center;
+    font-size: 1rem;
+    transition: .4s;
+    width: 32%;
+    height: 13%;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    margin: 6px;
+}
+.submit-insert{
+    text-align: center;
+    font-size: 1rem;
+    transition: .4s;
+    width: 14%;
+    height: 13%;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    background-color:  rgb(2, 114, 48);
+    color:  rgb(248, 248, 250);
+    margin: 6px;
+
+}
+.insert{
+    text-align: center;
+    font-size: 1rem;
+    transition: .4s;
+    width: 28%;
+    height: 13%;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    background-color:  rgb(2, 114, 48);
+    color:  rgb(248, 248, 250);
+    margin: 1;
+}
+.table-striped{
+    width: 67rem;
+    background-color: rgb(15 149 202);
+    border-radius: 2.2rem;
+    padding: 1rem;
+    margin: 0rem auto;
+    display: flex;
+    /* flex-direction: row; */
+    /* flex-direction: column; */
+    /* flex-direction: row-reverse; */
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+table{
+    width:100%;
+    border-collapse:collapse;
+    
+}
+table,th,td{
+    border:2px solid rgb(116, 108, 2);
+}
+   
+td{
+ text-align:center;
+ height:60px;
+ vertical-align:bottom;
+ padding:20px;
+
+}
+td:hover{
+    background-color:#0f8693;
+    color:rgb(121, 202, 240);
+   }
+   /* برای سطرهای فرد */
+table tr:nth-child(odd){
+    background-color:#f2f2f2;
+   }
+    
+   /* برای سطرهای زوج */
+   table tr:nth-child(even){
+    background-color:#f01d64;
+    color:#fff;
+   }

@@ -1,0 +1,114 @@
+.bg-info {
+    background-color: #ffffff!important;
+}
+.bg-info, .bg-info>a {
+    color: #212529!important;
+}
+
+.card-primary:not(.card-outline)>.card-header {
+    background-color: #25AFBA;
+}
+.btn-primary {
+    color: rgb(10, 10, 10);
+    box-shadow: none;
+    background-color: #FFE366 !important;
+    border-color: #030303 !important;
+    font-weight: 700;
+
+}
+
+  .card-body.p-0 .table tbody>tr>td:last-of-type, .card-body.p-0 .table tbody>tr>th:last-of-type, .card-body.p-0 .table tfoot>tr>td:last-of-type, .card-body.p-0 .table tfoot>tr>th:last-of-type, .card-body.p-0 .table thead>tr>td:last-of-type, .card-body.p-0 .table thead>tr>th:last-of-type {
+    padding-right: 0.1rem;
+  }
+  .bg-warning1 {
+    background-color: #ecf87f!important;
+  }
+  [class*=sidebar-dark-] .sidebar a {
+    color: #060606;
+  }
+  .h5, h5 {
+    font-size: 1.2rem;
+  }
+  .widget-user-2 .widget-user-desc {
+    margin-top: 20px;
+    margin-right: 69px;
+
+  }
+  .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: inherit;
+  }
+  .card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 0 solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    margin-top: 0.5rem;
+
+}
+
+.widget-user .widget-user-username {
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 0;
+  margin-top: 0;
+  text-shadow: 0 1px 1pxrgba(0,0,0,.2);
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  margin-bottom: .5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: inherit;
+}
+.user-account{
+  padding-right: 1rem;
+  padding-left: 1rem;
+  height: 2.5rem;
+  position: relative;
+  display: block;
+  background-color: #FFE366;
+  color: #000000;
+  border-radius:0.25rem;
+  font-weight: 600;
+  border-color:#000000
+}
+[class*=sidebar-dark-] .sidebar a {
+  color: #ffffff;
+}
+.brand-link .brand-image {
+  float: none;
+  line-height: .8;
+  margin-left: .8rem;
+  margin-top: -3px;
+  max-height: 50px;
+  width: auto;
+}
+[class*=sidebar-dark] .brand-link, [class*=sidebar-dark] .brand-link .pushmenu {
+  color: rgb(255 227 102);
+}
+.brand-link {
+  display: block;
+  font-size: 1.60rem;
+  padding: .8125rem .5rem;
+  transition: width .3s ease-in-out;
+  white-space: nowrap;
+}
+.main-header .nav-link {
+  height: 2.5rem;
+  position: relative;
+  font-weight: 700;
+}
+
+@media screen  {
+  
+}

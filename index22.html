@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shop</title>
+
+      <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bootstrap 4 -->
+  <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+  <!-- summernote -->
+  <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
+  <link rel="stylesheet" href="project/shop.css">
+
+  <!-- <link rel="stylesheet" href="get/test/styles/app.css"> -->
+
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+  <div class="wrapper">
+     <!-- modal -->
+  <div class="modal fade" id="modal-default">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title"></h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p id="modal-body">
+            
+          </p>
+        </div>
+        <div class="modal-footer justify-content-between">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="save">Save</button>
+        </div>
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+<!-- end modal -->
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+      <!-- Left navbar links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" data-widget="pushmenu" href="#" role="button"
+            ><i class="fas fa-bars"></i
+          ></a>
+        </li>
+        <li class="nav-item  d-sm-inline-block">
+          <a
+            href="liste.html"
+            class="nav-link"
+            style="color: #020202; font-size: larger"
+            >MetaDeSC</a
+          >
+        </li>
+      </ul>
+
+      <!-- Right navbar links -->
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link" data-toggle="dropdown" href="#">
+            <i class="fas fa-user"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+            <a href="#" class="dropdown-item">
+              <!-- Message Start -->
+              <div class="media">
+                <div class="media-body">
+                  <h3 class="dropdown-item-title">
+                    inventory
+                    <span
+                      class="float-right text-m text-primary"
+                      id="inventory-sidebar"
+                      ><i class="badge bg-primary"></i
+                    ></span>
+                  </h3>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="dropdown-item">
+              <!-- Message Start -->
+              <div class="media">
+                <div class="media-body">
+                  <h3 class="dropdown-item-title">
+                    Blocked inventory
+                    <span
+                      class="float-right text-sm text-danger"
+                      id="blocked-amount"
+                      ><i class="badge bg-primary"></i
+                    ></span>
+                  </h3>
+                </div>
+              </div>
+            </a>
+            <a href="./profile.html" class="dropdown-item">
+              <!-- Message Start -->
+              <div class="media">
+                <div class="media-body">
+                  <h3 class="dropdown-item-title">
+                    My Profile
+                    <span class="float-right text-sm"
+                      ><i class="fas fa-pencil-alt"></i
+                    ></span>
+                  </h3>
+                </div>
+              </div>
+            </a>
+            <a href="./login-v2.html" class="dropdown-item">
+              <!-- Message Start -->
+              <div class="media">
+                <div class="media-body">
+                  <h3 class="dropdown-item-title">
+                    Exit
+                    <span class="float-right text-sm text-danger"
+                      ><i class="fas fa-times-circle"></i
+                    ></span>
+                  </h3>
+                </div>
+              </div>
+            </a>
+          </div>
+        </li>
+        <!-- shopping cart -->
+        <li class="nav-item">
+          <a class="nav-link" href="./Cart.html" role="button">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          </a>
+        </li>
+        <!-- shopping cart -->
+
+        <!-- Messages Dropdown Menu -->
+        <li class="nav-item dropdown">
+          <a class="nav-link" data-toggle="dropdown" href="#">
+            <i class="far fa-comments"></i>
+            <span class="badge badge-danger navbar-badge">3</span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+            <a href="#" class="dropdown-item">
+              <!-- Message Start -->
+              <div class="media">
+                <img
+                  src="dist/img/AdminLTELogo.png"
+                  alt="User Avatar"
+                  class="img-size-50 mr-3 img-circle"
+                />
+                <div class="media-body">
+                  <h3 class="dropdown-item-title">
+                    Admin
+                    <span class="float-right text-sm text-danger"
+                      ><i class="fas fa-star"></i
+                    ></span>
+                  </h3>
+                  <p class="text-sm">Call me whenever you can...</p>
+                  <p class="text-sm text-muted">
+                    <i class="far fa-clock mr-1"></i> 4 Hours Ago
+                  </p>
+                </div>
+              </div>
+              <!-- Message End -->
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              <!-- Message Start -->
+              <div class="media">
+                <img
+                  src="./dist/img/AdminLTELogo.png"
+                  alt="User Avatar"
+                  class="img-size-50 img-circle mr-3"
+                />
+                <div class="media-body">
+                  <h3 class="dropdown-item-title">
+                    Admin
+                    <span class="float-right text-sm text-muted"
+                      ><i class="fas fa-star"></i
+                    ></span>
+                  </h3>
+                  <p class="text-sm">I got your message bro</p>
+                  <p class="text-sm text-muted">
+                    <i class="far fa-clock mr-1"></i> 4 Hours Ago
+                  </p>
+                </div>
+              </div>
+              <!-- Message End -->
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              <!-- Message Start -->
+              <div class="media">
+                <img
+                  src="dist/img/AdminLTELogo.png"
+                  alt="User Avatar"
+                  class="img-size-50 img-circle mr-3"
+                />
+                <div class="media-body">
+                  <h3 class="dropdown-item-title">
+                    Admin
+                    <span class="float-right text-sm text-warning"
+                      ><i class="fas fa-star"></i
+                    ></span>
+                  </h3>
+                  <p class="text-sm">The subject goes here</p>
+                  <p class="text-sm text-muted">
+                    <i class="far fa-clock mr-1"></i> 4 Hours Ago
+                  </p>
+                </div>
+              </div>
+              <!-- Message End -->
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item dropdown-footer"
+              >See All Messages</a
+            >
+          </div>
+        </li>
+
+        <!-- Notifications Dropdown Menu -->
+        <!-- <li class="nav-item d-none dropdown">
+          <a class="nav-link" data-toggle="dropdown" href="#">
+            <i class="far fa-bell"></i>
+            <span class="badge badge-warning navbar-badge">15</span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+            <span class="dropdown-item dropdown-header"
+              >15 Notifications</span
+            >
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              <i class="fas fa-envelope mr-2"></i> 4 new messages
+              <span class="float-right text-muted text-sm">3 mins</span>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              <i class="fas fa-users mr-2"></i> 8 company requests
+              <span class="float-right text-muted text-sm">12 hours</span>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              <i class="fas fa-file mr-2"></i> 3 new reports
+              <span class="float-right text-muted text-sm">2 days</span>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item dropdown-footer"
+              >See All Notifications</a
+            >
+          </div>
+        </li> -->
+        <!-- <li class="nav-item">
+          <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+            <i class="fas fa-expand-arrows-alt"></i>
+          </a>
+        </li> -->
+      </ul>
+    </nav>
+    <!-- /.navbar -->
+
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+      <a href="liste.html" class="brand-link">
+        <img
+          src="dist/img/IMG_20221110_110556_746.jpg"
+          alt="Admin Logo"
+          class="brand-image img-circle elevation-3"
+          style="opacity: 0.8"
+        />
+        <span class="brand-text font-weight-light">MetaDeSC</span>
+      </a>
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <!-- Sidebar user panel (optional) -->
+
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+          <div class="image">
+            <img
+              src="./dist/img/Xl5ekxoBNQFr2NYL.jpg"
+              style="width: 2.8rem"
+              class="img-circle elevation-2"
+              alt="User Image"
+            />
+          </div>
+          <div class="info">
+            <a
+              href="profile.html"
+              class="d-block"
+              style="margin-top: 0.45rem"
+              id="username-sidebar"
+            ></a>
+          </div>
+        </div>
+
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+          <ul
+            class="nav nav-pills nav-sidebar flex-column"
+            data-widget="treeview"
+            role="menu"
+            data-accordion="false"
+          >
+            <!-- Add icons to the links using the .nav-icon class
+                   with font-awesome or any other icon font library -->
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-copy"></i>
+                <p>
+                  Dashboard
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li
+                  class="nav-item"
+                  id="request-section"
+                  style="display: none"
+                >
+                  <a href="dashboard.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Requests</p>
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
+                  id="add-money-section"
+                  style="display: none"
+                >
+                  <a href="dashboard.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Add Money</p>
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
+                  id="history-section"
+                  style="display: none"
+                >
+                  <a href="dashboard.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>History of purchases</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item" id="list-section" style="display: none">
+              <a href="./liste.html" class="nav-link active">
+                <i class="far fa-circle nav-icon"></i>
+                <p>List</p>
+              </a>
+            </li>
+            <li
+              class="nav-item"
+              id="production-section"
+              style="display: none"
+            >
+              <a href="./index11.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Production</p>
+              </a>
+            </li>
+            <li class="nav-item" id="warehouse-section" style="display: none">
+              <a href="./Warehouse.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Warehouse</p>
+              </a>
+            </li>
+            <li class="nav-item" id="shop-section" style="display: none">
+              <a href="./index22.html" class="nav-link" id="shop-section">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Shop</p>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+      </div>
+      <!-- /.sidebar -->
+    </aside>
+
+    </div>
+      <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    
+    <div class="start">
+      <div class="row" style="max-width: 100%;">
+        
+        
+
+       
+      </div>
+
+ </div>
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <!-- <h1>Widgets</h1> -->
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+
+
+     <div class="row">
+
+        
+    </div>
+              <!-- jQuery -->
+              <script src="plugins/jquery/jquery.min.js"></script>
+              <!-- jQuery UI 1.11.4 -->
+              <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+              <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+              <script>
+                $.widget.bridge('uibutton', $.ui.button)
+              </script>
+              <!-- Bootstrap 4 -->
+              <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+              <!-- ChartJS -->
+              <script src="plugins/chart.js/Chart.min.js"></script>
+              <!-- Sparkline -->
+              <script src="plugins/sparklines/sparkline.js"></script>
+              <!-- JQVMap -->
+              <script src="plugins/jqvmap/jquery.vmap.min.js"></script>
+              <script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+              <!-- jQuery Knob Chart -->
+              <script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+              <!-- daterangepicker -->
+              <script src="plugins/moment/moment.min.js"></script>
+              <script src="plugins/daterangepicker/daterangepicker.js"></script>
+              <!-- Tempusdominus Bootstrap 4 -->
+              <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+              <!-- Summernote -->
+              <script src="plugins/summernote/summernote-bs4.min.js"></script>
+              <!-- overlayScrollbars -->
+              <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+              <!-- AdminLTE App -->
+              <script src="dist/js/adminlte.js"></script>
+              <!-- AdminLTE for demo purposes -->
+              <!-- <script src="dist/js/demo.js"></script> -->
+              <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+              <script src="dist/js/pages/dashboard.js"></script>
+    <script src="./app.js"></script>
+
+</body>
+</html>
+
